@@ -14,5 +14,5 @@ The Pokémon Company - PTCG AI Battle Challenge Simulationにおける解法に�
 
 今回私たちは、強化学習を用いたエージェントを作るのは不完全情報ゲームであること、そして単に技術力が足りないと判断したためルールベースでのエージェントを作成することにしました。
 ルールベースエージェントを作成する上で、
-[フーディンデッキエージェントルールベースモデル]: <https://www.kaggle.com/code/ryotasueyoshi/rule-based-not-psychic-alakazam-best-5th?scriptVersionId=328654333>
+[フーディンデッキエージェントルールベースモデル](https://www.kaggle.com/code/ryotasueyoshi/rule-based-not-psychic-alakazam-best-5th?scriptVersionId=328654333)
 をすべてのデッキエージェントのひな形として採用した。
