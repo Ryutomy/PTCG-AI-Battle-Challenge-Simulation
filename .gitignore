@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+
+# Submission packages contain third-party competition runtime files.
+*.tar.gz
+**/submission/extracted/
+
+# Local verification output
+evidence/local-audit/

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Replay-driven development loop</title>
+  <desc id="desc">敗戦リプレイから再現、最小変更、paired A/B評価、採否、提出監査へ進む開発ループ</desc>
+  <defs>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="360" rx="24" fill="#f8fafc"/>
+  <text x="60" y="48" font-family="Segoe UI, sans-serif" font-size="24" font-weight="700" fill="#0f172a">Replay-driven development</text>
+  <g font-family="Segoe UI, sans-serif" text-anchor="middle">
+    <g><rect x="55" y="95" width="200" height="90" rx="16" fill="#fff7ed" stroke="#f97316" stroke-width="2"/><text x="155" y="132" font-size="18" font-weight="700" fill="#9a3412">敗戦リプレイ</text><text x="155" y="160" font-size="14" fill="#7c2d12">問題局面を選択</text></g>
+    <g><rect x="315" y="95" width="200" height="90" rx="16" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/><text x="415" y="132" font-size="18" font-weight="700" fill="#0f172a">判断を再現</text><text x="415" y="160" font-size="14" fill="#475569">prompt・Action一致</text></g>
+    <g><rect x="575" y="95" width="200" height="90" rx="16" fill="#ffffff" stroke="#818cf8" stroke-width="2"/><text x="675" y="132" font-size="18" font-weight="700" fill="#0f172a">最小変更</text><text x="675" y="160" font-size="14" fill="#475569">一候補・一ルール</text></g>
+    <g><rect x="835" y="95" width="310" height="90" rx="16" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/><text x="990" y="128" font-size="18" font-weight="700" fill="#312e81">Paired A/B evaluation</text><text x="990" y="155" font-size="14" fill="#4338ca">固定seed・先後均等・error 0</text><text x="990" y="176" font-size="14" fill="#4338ca">matchup / seat / aggregate</text></g>
+    <g><rect x="835" y="235" width="310" height="75" rx="16" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/><text x="990" y="267" font-size="18" font-weight="700" fill="#065f46">提出監査</text><text x="990" y="293" font-size="14" fill="#047857">60枚・package・smoke・raw exec</text></g>
+    <g><rect x="505" y="235" width="270" height="75" rx="16" fill="#ffffff" stroke="#64748b" stroke-width="2"/><text x="640" y="267" font-size="18" font-weight="700" fill="#0f172a">採用 / HOLD / 棄却</text><text x="640" y="293" font-size="14" fill="#475569">効果と副作用を分離</text></g>
+  </g>
+  <g stroke="#64748b" stroke-width="2.5" fill="none" marker-end="url(#arrow2)">
+    <line x1="255" y1="140" x2="305" y2="140"/>
+    <line x1="515" y1="140" x2="565" y2="140"/>
+    <line x1="775" y1="140" x2="825" y2="140"/>
+    <path d="M990 185 L990 225"/>
+    <line x1="835" y1="272" x2="785" y2="272"/>
+    <path d="M505 272 L155 272 L155 195"/>
+  </g>
+</svg>
