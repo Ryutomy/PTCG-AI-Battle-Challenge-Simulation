@@ -9,17 +9,17 @@ Kaggle「[The Pokémon Company - PTCG AI Battle Challenge Simulation](https://ww
 
 ## Competition
 
-このコンペティションでは、不完全情報ゲームであるPokémon Trading Card Gameを対象に、毎ターン与えられる観測情報と合法手から行動を選択するAIエージェントを開発します。
-
-エージェントはカードの価値だけでなく、盤面、手札、Energy、Prize race、先攻・後攻、相手のデッキ系統を踏まえて行動する必要があります。
+このコンペティションでは、不完全情報ゲームであるPokémon Trading Card Gameを対象に、毎ターン与えられる観測情報と合法手から行動を選択するAIエージェントを開発する。
+エージェントは自分の手札やトラッシュなどの公開情報だけでなく、相手の手札や両者のデッキなどの非公開情報を判断して行動する必要がある。
 
 ## Approach
 
-コンペ期間、利用可能な計算資源、判断の追跡可能性を考慮し、ルールベース方式を採用しました。ルールベースは、Kaggleの敗戦リプレイで見つけた判断ミスを局面単位で再現し、条件を限定した修正として検証できる点を重視しています。
+コンペ期間、利用可能な計算資源、判断の追跡可能性を考慮し、ルールベース方式を採用した。
+ルールベースは、Kaggleの敗戦リプレイで見つけた修正点を一つずつローカルで検証して、有意に改善が見られたものだけを採用した。
 
 ![Agent decision flow](assets/agent-decision-flow.svg)
 
-開発では、変更を一度に重ねず、原則として一つの判断ルールを分離しました。候補は同じseed streamと先後均等の対戦で比較し、改善が再現しないものや他対面を悪化させるものは提出版へ含めませんでした。
+なお、改善案は同じseedと先後均等の対戦で比較し、勝率を見て判断した。
 
 詳しい評価設計は[Methodology](docs/methodology.md)、代表的な採否判断は[Experiments](docs/experiments.md)にまとめています。
 
@@ -27,7 +27,7 @@ Kaggle「[The Pokémon Company - PTCG AI Battle Challenge Simulation](https://ww
 
 ### Yuki v16
 
-Marnie's Grimmsnarlを中心とした進化デッキ向けエージェントです。序盤のImpidimp展開、Rare Candyを含む進化経路、MunkidoriのBench運用、Energy配分、終盤のBoss's Ordersを使ったPrize取得を局面別に制御します。
+Marnie's Grimmsnarlを中心とした進化デッキ向けエージェント。序盤のImpidimp展開、Rare Candyを含む進化経路、MunkidoriのBench運用、Energy配分、終盤のBoss's Ordersを使ったPrize取得を局面別に制御します。
 
 v16では、最初の自分のターンに限定し、盤面条件を満たす場合だけBuddy-Buddy PoffinをPoke Padより先に処理します。Poffinで制約の強いImpidimp探索を先に済ませ、Poke Padの柔軟な探索を残すための限定ルールです。
 
